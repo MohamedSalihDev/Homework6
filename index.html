@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>WeatherApp</title>
+</head>
+
+<body>
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-dark bg-dark">
+                <span class=" navbar-brand mb-0 h1" style="margin: auto; font-size: 30px;">Weather Dashboard</span>
+            </nav>
+            <div class="row">
+                <div class="col-4" style="background-color: whitesmoke; margin-bottom: auto; margin-top: auto;">
+                    <h4 style="padding-top: 1%;">Search for a City:</h4>
+                    <nav class="navbar navbar-light bg-light">
+                        <form class="form-inline">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="searchButton">Search</button>
+                        </form>
+                    </nav>
+                    <ul class="list-group" style="padding: 5% 0%;">
+                        <li class="list-group-item" id="lgi1"></li>
+                        <li class="list-group-item"></li>
+                        <li class="list-group-item"></li>
+                        <li class="list-group-item"></li>
+                        <li class="list-group-item"></li>
+                        <li class="list-group-item"></li>
+                        <li class="list-group-item"></li>
+                        <li class="list-group-item"></li>
+                    </ul>
+                </div>
+                <div class="col-8">
+                    <div class="row" style="background-color: white; border: 4px black ; padding:  3% 3%">
+                        <div class="col">
+                            <div class="row" style="padding: 3% 3%">
+                                <h2 style="line-height: 1.5" id="cityName"></h2>   <img  id="todayIcon"></img><span style="font-size: 20px; padding-left: 3px;" id="todaysDate"></span> 
+                            </div>
+                            <div class="row" id="todayTemperature">
+                                <p>Temperature:</p>
+                            </div>
+                            <div class="row" id="todayHumidity">
+                                <p>Humidity:</p>
+                            </div>
+                            <div class="row" id="todayWindSpeed">
+                                <p>WindSpeed:</p>
+                            </div>
+                            <div class="row" id="todayUVindex">
+                                <p>UV Index:</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="row" style="background-color: yellow;"> -->
+                    <div class="row justify-content-around" style="padding: 2% 0%;">
+                        <div class="col-2 ">
+                            <div class="card text-white bg-primary mb-3" style="width: 8rem;">
+                                <div class="card-header" id="tomorrow">08/16</div>
+                                <div class="card-body">
+                                    <img id="tomorrowIcon"></img>
+                                    <p style="font-size: 14px;" id="tomorrowTemperature">Temp: 45*</p>
+                                    <p id="tomorrowHumidity">Humidity:</p>
+    
+                                </div>
+    
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="card text-white bg-primary mb-3" style="width: 8rem;">
+                                <div class="card-header" id="dayAfterTomorrow">08/16</div>
+                                <div class="card-body">
+                                    <img id="dayAfterTomorrowIcon"></img>
+                                    <p style="font-size: 14px;" id="dayAfterTomorrowTemperature">Temp: 45*</p>
+                                    <p id="dayAfterTomorrowHumidity">Humidity:</p>
+    
+                                </div>
+    
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="card text-white bg-primary mb-3" style="width: 8rem;">
+                                <div class="card-header" id="thirdDay">08/16</div>
+                                <div class="card-body">
+                                    <img id="thirdDayIcon"></img>
+                                    <p style="font-size: 14px;" id="thirdDayTemperature">Temp: 45*</p>
+                                    <p id="thirdDayHumidity">Humidity:</p>
+    
+                                </div>
+    
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="card text-white bg-primary mb-3" style="width: 8rem;">
+                                <div class="card-header" id="fourthDay">08/16</div>
+                                <div class="card-body">
+                                    <img id="fourthDayIcon"></img>
+                                    <p style="font-size: 14px;" id="fourthDayTemperature">Temp: 45*</p>
+                                    <p id="fourthDayHumidity">Humidity:</p>
+    
+                                </div>
+    
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="card text-white bg-primary mb-3" style="width: 8rem;">
+                                <div class="card-header" id="fifthDay">08/16</div>
+                                <div class="card-body">
+                                    <img id="fifthDayIcon"></img>
+                                    <p style="font-size: 14px;" id="fifthDayTemperature">Temp: 45*</p>
+                                    <p id="fifthDayHumidity">Humidity:</p>
+    
+    
+                                </div>
+    
+                            </div>
+                        </div>
+    
+    
+    
+                    </div>
+    
+                </div>
+            </div>
+    
+            <!-- </div> -->
+        </div>
+        </div>
+    
+        </div>
+        </div>
+  
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
